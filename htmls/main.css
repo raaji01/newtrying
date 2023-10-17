@@ -1,89 +1,100 @@
-*{
-    margin: 0; 
-    padding: 0; 
-    font-family: 'poppins', sans-serif; 
+/* Reset some default styles and set the base font family */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
+/* Styles for an element with the ID 'space' in Nav bar logo and toggle button */
+#space {
 
-.hero{
-
-background: #1d2026; 
-min-height: 500vh; 
-width: 100%; 
-color: #fff; 
-position: relative;
+    display: flex;
+    /* Use flexbox to arrange the elements horizontally */
+    align-items: center;
+    /* Vertically align elements */
+    gap: 20px;
+    /* Add a 20px gap between the logo and the button */
 
 }
-h4,h3{
+/* Styles for an element with the class 'hero', main content */
+.hero {
+
+    background: #1d2026;
+    min-height: 500vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+
+}
+/* Styles for heading elements h3 and h4 */
+h4,
+h3 {
     font-family: 'Plus Jakarta Sans', serif;
 }
+/* Styles for an element with the class 'full-name' using line height */
 .full-name {
     font-style: normal;
     font-weight: 700;
     font-size: 44px;
     line-height: 55px;
 }
+
 .primary {
     color: var(--purple);
 }
-
-nav{
+/* Styles for the 'nav' element */
+nav {
 
     width: 100%;
-    
+
     color: #fff;
-    
+
     position: relative;
-    
-    display: flex; 
+
+    display: flex;
     align-items: center;
     padding: 20px 8%;
-    
-    
-    
-    }
-    
-nav.menu-img{
-    
-    width: 25px;
-    
-    margin-right: 20px; 
-    cursor: pointer;}
-    
-nav.logo1{
-    
-     cursor: pointer;
+
+
+
+}
+/* Styles for elements with the class 'logo1' inside 'nav' */
+
+nav.logo1 {
+
+    cursor: pointer;
     margin-left: 5px;
     height: 10px;
-    
+
 }
+
 .navbar-collapse {
     flex-basis: 100%;
     flex-grow: 1;
     align-items: center;
 }
-
+/* Styles for elements with the class 'nav-link', transition included */
 .nav-link {
-    
+
     color: white;
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
- .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     color: rgba(255, 255, 255, .55);
 }
-
- .navbar-brand:focus,
- .navbar-brand:hover {
+/* Styles for focused or hovered 'navbar-brand' and 'nav-link' elements */
+.navbar-brand:focus,
+.navbar-brand:hover {
     color: #7E74F1;
 }
 
- .navbar-nav .nav-link:focus,
- .navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
     color: #7E74F1;
 }
-
+/* Styles for focused or hovered links */
 a:focus,
 a:hover {
     text-decoration: underline;
@@ -91,178 +102,167 @@ a:hover {
     transition: color .5s ease-in-out, background-color .5s ease-in-out, border-color .5s ease-in-out;
 }
 
-
-button{
+/* Styles for buttons */
+button {
 
     background: #efefef;
-    height: 30px; 
+    height: 30px;
     width: 60px;
-    border-radius: 20px; 
+    border-radius: 20px;
     border: 0;
     outline: 0;
     cursor: pointer;
     transition: background 0.5s;
-    
-    }
-    
-button span{
-    
-    display: block; 
+
+}
+
+button span {
+
+    display: block;
     background: #999;
     height: 26px;
     width: 26px;
     border-radius: 50%;
     margin-left: 0.5px;
     transition: background 0.5s margin-left 0.5s;
- }
-    
- nav ul{
+}
+
+nav ul {
 
     flex: 1;
-     text-align: right;
-    
-    }
-    
-    nav ul li{ 
-        display: inline-block; 
-        list-style: none; 
-        margin: 0 20px;
-    
-    }
-    
-    nav ul li a{
-    
-    text-decoration: none; 
-    color: #fff;
-    }
-
-.lamp-container{
-        position: absolute;
-
-        top: -10px; 
-        left: 30%;
-
-width: 200px;
+    text-align: right;
 
 }
 
-.lamp{
-
-width: 100%;
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
 
 }
 
-.light{
+nav ul li a {
 
-position: absolute;
-
-top: 97%;
-
-left: 50%;
-
-transform: translateX(-50%);
-
-width: 700px;
-
-margin-left: -10px;
-opacity: 0;
-transition: opacity 0.5s;
-}
-.logo{
-    
-    cursor: pointer;
-   
-   width: 20px;
-   opacity: 0;
-transition: opacity 0.5s;
-}
-
-.text-container{
-
-    max-width: 600px; 
-    margin-top: 7%; 
-    margin-left: 60%;
-    
-    }
-    
-    .text-container h3{
-    
-    font-size: 35px; 
-    font-weight: 300;
-    
-    }
-    
-.text-container a{
-    
     text-decoration: none;
-    
-    background: #7E74F1; 
-    padding: 14px 40px; 
-    display: inline-block; 
-    
     color: #fff;
-    
-    font-size: 18px; 
-    margin-top: 30;
-    border-radius: 30px;    
 }
-.active{
+/* This CSS is for styling a lamp container */
+.lamp-container {
+    position: absolute;
+
+    top: -10px;
+    left: 30%;
+
+    width: 200px;
+
+}
+/* This CSS is for styling a lamp inside the container */
+.lamp {
+
+    width: 100%;
+
+}
+/* This CSS is for styling a light element */
+.light {
+
+    position: absolute;
+
+    top: 97%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 700px;
+
+    margin-left: -10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+/* This CSS is for styling a logo element */
+.logo {
+
+    cursor: pointer;
+
+    width: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+/* This CSS is for styling a text container */
+.text-container {
+
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 60%;
+
+}
+/* This CSS is for styling an h3 element inside the text container */
+
+
+.text-container h3 {
+
+    font-size: 35px;
+    font-weight: 300;
+
+}
+/* This CSS is for styling anchor links inside the text container */
+.text-container a {
+
+    text-decoration: none;
+
+    background: #7E74F1;
+    padding: 14px 40px;
+    display: inline-block;
+
+    color: #fff;
+
+    font-size: 18px;
+    margin-top: 30;
+    border-radius: 30px;
+}
+/* This CSS is for styling the active state of anchor links */
+.active {
     background: #7E74F1;
 }
-.active span{
+/* This CSS is for styling a span element inside an active state link */
+.active span {
     background: #efefef;
     margin-left: 31px;
 }
-.on{
-    opacity: 1;
+/* This CSS is for an 'on' state */
+.on {
+    opacity: 1; /* Make elements with the 'on' class fully visible */
 }
-.popup{
-
-   
-    
-    background: #fff; 
+/* This CSS is for styling a popup element */
+.popup {
+    background: #fff;
     border-radius: 6px;
-    
+
     position: absolute;
-    
-    top: 10%; 
+
+    top: 10%;
     left: 65%;
-    
-    transform: translate(-50%, -50%) scale(0.1);
-    
+
+    transform: translate(-50%, -50%) scale(0.1);/* Initial hidden state with scaling */
+
     text-align: center;
     padding: 0 30px 30px;
-    
-    color: #333;
-    visibility: hidden;
-    
-    }
-    .popup img{
 
-        width: 100px;
-        
-        margin-top: -50px;
-        border-radius: 50%;
-        }
-    .open-popup{
-        
-        visibility: visible;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    .con{
-        /*width: 20px;
-        height: 20px;*/
-        background-color: #1d2026;
-        
-    }
-#ball1 , #ball2{
-position: relative;
-/* width: 10px;
-height: 10px;*/
-/* border-radius: 50%;*/
-transition: all 1s linear;
+    color: #333;
+    visibility: hidden;/* Initially, the popup is hidden */
 
 }
-        
+/* This CSS is for styling an image inside the popup */
+.popup img {
 
-        
+    width: 100px;
+
+    margin-top: -50px;
+    border-radius: 50%;
+}
+
+.open-popup {
+
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
