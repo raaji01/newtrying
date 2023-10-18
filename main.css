@@ -1,0 +1,569 @@
+/* Reset some default styles and set the base font family */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Styles for an element with the ID 'space' in Nav bar logo and toggle button */
+#space {
+
+    display: flex;
+    /* Use flexbox to arrange the elements horizontally */
+    align-items: center;
+    /* Vertically align elements */
+    gap: 20px;
+    /* Add a 20px gap between the logo and the button */
+
+}
+
+/* Styles for an element with the class 'hero', main content */
+.hero {
+
+    background: #1d2026;
+    min-height: 500vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+
+}
+
+/* Styles for heading elements h3 and h4 */
+h4,
+h3 {
+    font-family: 'Plus Jakarta Sans', serif;
+}
+
+/* Styles for an element with the class 'full-name' using line height */
+.full-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 55px;
+}
+
+.primary {
+    color: var(--purple);
+}
+
+/* Styles for the 'nav' element */
+nav {
+
+    width: 100%;
+
+    color: #fff;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+
+
+
+}
+
+/* Styles for elements with the class 'logo1' inside 'nav' */
+
+nav.logo1 {
+
+    cursor: pointer;
+    margin-left: 5px;
+    height: 10px;
+
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+
+/* Styles for elements with the class 'nav-link', transition included */
+.nav-link {
+
+    color: white;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .55);
+}
+
+/* Styles for focused or hovered 'navbar-brand' and 'nav-link' elements */
+.navbar-brand:focus,
+.navbar-brand:hover {
+    color: #7E74F1;
+}
+
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    color: #7E74F1;
+}
+
+/* Styles for focused or hovered links */
+a:focus,
+a:hover {
+    text-decoration: underline;
+    color: #7E74F1;
+    transition: color .5s ease-in-out, background-color .5s ease-in-out, border-color .5s ease-in-out;
+}
+
+/* Styles for buttons */
+button {
+
+    background: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 0.5s;
+
+}
+
+button span {
+
+    display: block;
+    background: #999;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 0.5px;
+    transition: background 0.5s margin-left 0.5s;
+}
+
+nav ul {
+
+    flex: 1;
+    text-align: right;
+
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+
+}
+
+nav ul li a {
+
+    text-decoration: none;
+    color: #fff;
+}
+
+/* This CSS is for styling a lamp container */
+.lamp-container {
+    position: absolute;
+
+    top: -10px;
+    left: 30%;
+
+    width: 200px;
+
+}
+
+/* This CSS is for styling a lamp inside the container */
+.lamp {
+
+    width: 100%;
+
+}
+
+/* This CSS is for styling a light element */
+.light {
+
+    position: absolute;
+
+    top: 97%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 700px;
+
+    margin-left: -10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* This CSS is for styling a logo element */
+.logo {
+
+    cursor: pointer;
+
+    width: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* This CSS is for styling a text container */
+.text-container {
+
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 60%;
+
+}
+
+/* This CSS is for styling an h3 element inside the text container */
+
+
+.text-container h3 {
+
+    font-size: 35px;
+    font-weight: 300;
+
+}
+
+/* This CSS is for styling anchor links inside the text container */
+.text-container a {
+
+    text-decoration: none;
+
+    background: #7E74F1;
+    padding: 14px 40px;
+    display: inline-block;
+
+    color: #fff;
+
+    font-size: 18px;
+    margin-top: 30;
+    border-radius: 30px;
+}
+
+/* This CSS is for styling the active state of anchor links */
+.active {
+    background: #8077e8;
+}
+
+/* This CSS is for styling a span element inside an active state link */
+.active span {
+    background: #efefef;
+    margin-left: 31px;
+}
+
+/* This CSS is for an 'on' state */
+.on {
+    opacity: 1;
+    /* Make elements with the 'on' class fully visible */
+}
+
+/* This CSS is for styling a popup element */
+.popup {
+    background: #fff;
+    border-radius: 6px;
+
+    position: absolute;
+
+    top: 10%;
+    left: 65%;
+
+    transform: translate(-50%, -50%) scale(0.1);
+    /* Initial hidden state with scaling */
+
+    text-align: center;
+    padding: 0 30px 30px;
+
+    color: #333;
+    visibility: hidden;
+    /* Initially, the popup is hidden */
+
+}
+
+/* This CSS is for styling an image inside the popup */
+.popup img {
+
+    width: 100px;
+
+    margin-top: -50px;
+    border-radius: 50%;
+}
+
+.open-popup {
+
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.con {
+    /*width: 20px;
+    height: 20px;*/
+    background-color: #1d2026;
+}
+
+#ball1,
+#ball2 {
+    position: relative;
+
+    transition: all 1s linear;
+}
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #3498db;
+    /* Change this color to match your site's design */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* CSS for hiding content until preloader is gone */
+.hero {
+    display: none;
+}
+
+.cardy {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+}
+
+.box {
+
+    width: 300px;
+
+    height: 375px;
+    border-radius: 10px;
+    text-align: center;
+
+    overflow: hidden;
+
+    background-color: #192a56;
+    box-shadow: 0 0 20px 10px rgba(25, 42, 86, 0.8);
+
+    position: relative;
+}
+
+.box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    Left: 50%;
+
+    transform: translate(-50%, -50%);
+    height: 100%;
+
+    width: 100%;
+
+    border-radius: 10px;
+    text-align: center;
+
+    background: linear-gradient(135deg, #22a7f0, #ff6ac1);
+    box-shadow: 0 0 20px #22a7f0, 0 0 40px #22a7f0, 0 0 60px #22a7f0, 0 0 80px #22a7f0;
+
+    animation: glowingAnimation 2s ease-in-out infinite;
+}
+
+@keyframes glowingAnimation {
+    0% {
+
+        transform: translate(-50%, -50%) scale(0.8);
+
+        opacity: 0.8;
+
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translate(-50%, -50%) scale(0.8);
+
+        opacity: 0.8;
+    }
+}
+
+.text {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: large;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    max-width: 820px;
+
+
+    margin-left: 12%;
+}
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png');
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png');
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+    background-image: url('https://cdn.pixabay.com/photo/2017/03/30/17/41/javascript-2189147_1280.png');
+}
+
+.card__like {
+    width: 18px;
+}
+
+.card__clock {
+    width: 15px;
+    vertical-align: middle;
+    fill: #AD7D52;
+}
+
+.card__time {
+    font-size: 12px;
+    color: #AD7D52;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.card__clock-info {
+    float: right;
+}
+
+.card__img {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+
+.card__img--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+
+}
+
+.card {
+    margin-right: 25px;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: #1d2026;
+    width: 33.3%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.10, 1.10);
+}
+
+.card__info {
+    z-index: 2;
+    background-color: lightgray;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+}
+
+.card__category {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #868686;
+}
+
+.card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: #AD7D52;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}

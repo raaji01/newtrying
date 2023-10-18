@@ -17,7 +17,8 @@
             font-family: 'poppins', sans-serif;
 
         }
-/* Style for the main container */
+
+        /* Style for the main container */
         .container {
 
             width: 100%;
@@ -31,7 +32,8 @@
             align-items: center;
             justify-content: center;
         }
-/* Style for the form */
+
+        /* Style for the form */
         form {
 
             background: #fff;
@@ -42,7 +44,8 @@
             max-width: 600px;
             border-radius: 10px;
         }
-/* Style for form header (h3) */
+
+        /* Style for form header (h3) */
         form h3 {
 
             color: rgb(134, 32, 134);
@@ -52,7 +55,8 @@
             margin-bottom: 20px;
 
         }
-/* Style for form input and textarea fields */
+
+        /* Style for form input and textarea fields */
         form input,
         form textarea {
 
@@ -69,7 +73,8 @@
             font-size: 16px;
 
         }
-/* Style for the "Send" button */
+
+        /* Style for the "Send" button */
         form button {
 
             padding: 15px;
@@ -93,7 +98,8 @@
             border-radius: 30px;
 
         }
-/* Style for the floating bubbles */
+
+        /* Style for the floating bubbles */
         .bubbles img {
             width: 50px;
             animation: bubble 7s linear infinite;
@@ -115,7 +121,8 @@
 
 
         }
-/* Keyframes animation for the floating bubbles */
+
+        /* Keyframes animation for the floating bubbles */
         @keyframes bubble {
 
             0% {
@@ -143,7 +150,8 @@
                 opacity: 0;
             }
         }
-/* Delay animation for specific bubble images */
+
+        /* Delay animation for specific bubble images */
         .bubbles img:nth-child(1) {
             animation-delay: 2.8s;
 
@@ -188,7 +196,7 @@
 <body>
     <!-- Contact form container -->
     <div class="container">
-        <form action="https://formsubmit.co/el/punumu" method="POST">
+        <form id="contactForm">
             <h3>
                 Contact Me!
             </h3>
@@ -196,8 +204,8 @@
             <input type="email" id="email" name="email" placeholder="email id" required aria-labelledby="email">
 
 
-            <input type="tel" id="phone" name="phonenumber" placeholder="phone number" required aria-labelledby="phone">
-
+            <input type="tel" id="phone" name="phonenumber" placeholder="phone number" required aria-labelledby="phone"
+                pattern="\d{3}-\d{3}-\d{4}" title="Please enter a phone number in the format: 123-456-7890">
             <textarea id="message" rows="4" name="message" placeholder="Did you like my website"></textarea>
             <button type="submit">Send</button>
         </form>
@@ -206,40 +214,32 @@
 
     </div>
     <div class="bubbles">
-<!-- Floating bubbles -->
-        <img src="../mainimages/heart.webp">
-        <img src="../mainimages/bubble.png">
-        <img src="../mainimages/heart.webp">
-        <img src="../mainimages/bubble.png">
-        <img src="../mainimages/heart.webp">
-        <img src="../mainimages/bubble.png">
-        <img src="../mainimages/heart.webp">
+        <!-- Floating bubbles -->
+        <img src="./mainimages/heart.webp">
+        <img src="./mainimages/bubble.png">
+        <img src="./mainimages/heart.webp">
+        <img src="./mainimages/bubble.png">
+        <img src="./mainimages/heart.webp">
+        <img src="./mainimages/bubble.png">
+        <img src="./mainimages/heart.webp">
 
     </div>
 
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Thanks for your contact info,Do visit again");
+        });
+        const phoneNumberInput = document.getElementById("phone");
 
+        // Add an event listener to allow only numbers
+        phoneNumberInput.addEventListener("input", function (event) {
+            // Remove non-numeric characters from the input
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    </script>
 
-    <!--<script src="https://smtpjs.com/v3/smtp.js"></script>
-
-<script>
-
-function sendEmail(){
-
-Email.send({
-
-Host: "smtp.gmail.com",
-Username:"raajiq1@gmail.com", 
-Password: "Raajalakshumi12!",
-To: 'srilakshmikasirajan12@gmail.com',
-From: document.getElementById("email").value, 
-Subject: "New contact",
-Body: "And this is the body"
-}).then(
-message => alert(message)
-);
-}
-
-</script>-->
+    
 </body>
 
 </html>
